@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sirupsen/logrus"
-	"github.com/sirupsen/logrus/hooks/test"
+	"github.com/qokelate/logrus"
+	"github.com/qokelate/logrus/hooks/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -135,8 +135,8 @@ func TestEntryWithTimeCopiesData(t *testing.T) {
 // PanicLevel as severity only and do not trigger panic behavior.
 //
 // Regression and related history:
-//   - https://github.com/sirupsen/logrus/pull/65
-//   - https://github.com/sirupsen/logrus/pull/1283
+//   - https://github.com/qokelate/logrus/pull/65
+//   - https://github.com/qokelate/logrus/pull/1283
 func TestEntryLogPanicLevelDoesNotPanic(t *testing.T) {
 	tests := []struct {
 		doc  string
@@ -479,7 +479,7 @@ func (r reentrantValue) MarshalJSON() ([]byte, error) {
 
 // TestEntryReentrantLoggingDeadlock verifies that logging from within a field's
 // MarshalJSON (or similar serialization callback) does not deadlock.
-// This is a regression test for https://github.com/sirupsen/logrus/issues/1448.
+// This is a regression test for https://github.com/qokelate/logrus/issues/1448.
 func TestEntryReentrantLoggingDeadlock(t *testing.T) {
 	var buf bytes.Buffer
 	logger := logrus.New()

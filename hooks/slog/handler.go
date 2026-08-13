@@ -8,7 +8,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/sirupsen/logrus"
+	"github.com/qokelate/logrus"
 )
 
 // HandlerOptions are options for a [Handler].

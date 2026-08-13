@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/sirupsen/logrus"
+	"github.com/qokelate/logrus"
 )
 
 func BenchmarkEntry_WithError(b *testing.B) {

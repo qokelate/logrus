@@ -136,8 +136,8 @@ func (entry *Entry) Bytes() ([]byte, error) {
 	//
 	// See:
 	//
-	// - https://github.com/sirupsen/logrus/issues/1440
-	// - https://github.com/sirupsen/logrus/issues/1448
+	// - https://github.com/qokelate/logrus/issues/1440
+	// - https://github.com/qokelate/logrus/issues/1448
 	entry.Logger.mu.Lock()
 	formatter := entry.Logger.Formatter
 	entry.Logger.mu.Unlock()

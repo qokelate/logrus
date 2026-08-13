@@ -8,7 +8,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/sirupsen/logrus"
+	"github.com/qokelate/logrus"
 )
 
 func BenchmarkDummyLogger(b *testing.B) {

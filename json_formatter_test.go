@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/sirupsen/logrus"
+	"github.com/qokelate/logrus"
 )
 
 func TestErrorNotLost(t *testing.T) {

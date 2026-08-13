@@ -202,7 +202,7 @@ func (f *TextFormatter) printPlain(b *bytes.Buffer, entry *Entry, keys []string,
 	if !f.DisableSorting {
 		if f.SortingFunc == nil {
 			// Default sorting does not sort the "fixed keys";
-			// see https://github.com/sirupsen/logrus/commit/73bc94e60c753099e8bae902f81fbd6e7dd95f26
+			// see https://github.com/qokelate/logrus/commit/73bc94e60c753099e8bae902f81fbd6e7dd95f26
 			slices.Sort(keys)
 			fixedKeys = append(fixedKeys, keys...)
 		} else {

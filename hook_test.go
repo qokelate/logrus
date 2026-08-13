@@ -11,9 +11,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	. "github.com/sirupsen/logrus"
-	"github.com/sirupsen/logrus/hooks/test"
-	. "github.com/sirupsen/logrus/internal/testutils"
+	. "github.com/qokelate/logrus"
+	"github.com/qokelate/logrus/hooks/test"
+	. "github.com/qokelate/logrus/internal/testutils"
 )
 
 // RecordingFormatter is a test helper that implements Formatter and
@@ -126,7 +126,7 @@ func (h *SingleLevelModifyHook) Levels() []Level {
 // TestHookEntryIsPristine tests that each log gets a pristine copy of Entry,
 // and changes from modifying hooks are not persisted.
 //
-// Regression test for https://github.com/sirupsen/logrus/issues/795
+// Regression test for https://github.com/qokelate/logrus/issues/795
 func TestHookEntryIsPristine(t *testing.T) {
 	formatter := &RecordingFormatter{}
 	hook := &SingleLevelModifyHook{}

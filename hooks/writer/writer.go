@@ -3,7 +3,7 @@ package writer
 import (
 	"io"
 
-	"github.com/sirupsen/logrus"
+	"github.com/qokelate/logrus"
 )
 
 // Hook is a hook that writes logs of specified LogLevels to specified Writer

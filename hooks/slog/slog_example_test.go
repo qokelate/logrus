@@ -8,8 +8,8 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/sirupsen/logrus"
-	lslog "github.com/sirupsen/logrus/hooks/slog"
+	"github.com/qokelate/logrus"
+	lslog "github.com/qokelate/logrus/hooks/slog"
 )
 
 // ExampleNewHandler demonstrates using slog alongside an existing Logrus logger.
@@ -38,8 +38,8 @@ func ExampleNewHandler() {
 // Logrus writes to stderr by default, so the example has no stdout output.
 // The log output will look similar to:
 //
-//	time="2026-01-02T03:04:05Z" level=info msg="regular info" func=github.com/sirupsen/logrus/hooks/slog_test.ExampleNewHandler_options file="/src/hooks/slog/slog_example_test.go:62" animal=walrus
-//	time="2026-01-02T03:04:06Z" level=warning msg="custom level" func=github.com/sirupsen/logrus/hooks/slog_test.ExampleNewHandler_options file="/src/hooks/slog/slog_example_test.go:63" animal=walrus
+//	time="2026-01-02T03:04:05Z" level=info msg="regular info" func=github.com/qokelate/logrus/hooks/slog_test.ExampleNewHandler_options file="/src/hooks/slog/slog_example_test.go:62" animal=walrus
+//	time="2026-01-02T03:04:06Z" level=warning msg="custom level" func=github.com/qokelate/logrus/hooks/slog_test.ExampleNewHandler_options file="/src/hooks/slog/slog_example_test.go:63" animal=walrus
 func ExampleNewHandler_options() {
 	logger := logrus.New()
 	logger.SetFormatter(&logrus.TextFormatter{
