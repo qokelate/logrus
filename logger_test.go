@@ -5,8 +5,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/sirupsen/logrus"
-	"github.com/sirupsen/logrus/hooks/test"
+	"github.com/qokelate/logrus"
+	"github.com/qokelate/logrus/hooks/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -65,8 +65,8 @@ func TestLogger_SetBufferPool(t *testing.T) {
 // PanicLevel as severity only and do not trigger panic behavior.
 //
 // Regression and related history:
-//   - https://github.com/sirupsen/logrus/pull/65
-//   - https://github.com/sirupsen/logrus/pull/1283
+//   - https://github.com/qokelate/logrus/pull/65
+//   - https://github.com/qokelate/logrus/pull/1283
 func TestLoggerLogPanicLevelDoesNotPanic(t *testing.T) {
 	tests := []struct {
 		doc  string

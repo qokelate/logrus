@@ -1,4 +1,4 @@
-module github.com/sirupsen/logrus
+module github.com/qokelate/logrus
 
 go 1.23
 

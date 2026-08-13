@@ -565,7 +565,7 @@ func TestCustomSorting(t *testing.T) {
 // are performed on the first message, and the message is properly
 // formatted with default (fixedKeys) fields excluded.
 //
-// regression test for https://github.com/sirupsen/logrus/issues/1298
+// regression test for https://github.com/qokelate/logrus/issues/1298
 func TestCustomSorting_FirstFormat(t *testing.T) {
 	if !checkIfTerminal(os.Stderr) {
 		if runtime.Compiler == "tinygo" {

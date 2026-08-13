@@ -8,8 +8,8 @@ package main
 import (
 	"log/syslog"
 
-	"github.com/sirupsen/logrus"
-	lsyslog "github.com/sirupsen/logrus/hooks/syslog"
+	"github.com/qokelate/logrus"
+	lsyslog "github.com/qokelate/logrus/hooks/syslog"
 )
 
 func main() {
@@ -30,8 +30,8 @@ package main
 import (
 	"log/syslog"
 
-	"github.com/sirupsen/logrus"
-	lsyslog "github.com/sirupsen/logrus/hooks/syslog"
+	"github.com/qokelate/logrus"
+	lsyslog "github.com/qokelate/logrus/hooks/syslog"
 )
 
 func main() {
@@ -61,8 +61,8 @@ package main
 import (
 	"log/syslog"
 
-	log "github.com/sirupsen/logrus"
-	lsyslog "github.com/sirupsen/logrus/hooks/syslog"
+	log "github.com/qokelate/logrus"
+	lsyslog "github.com/qokelate/logrus/hooks/syslog"
 )
 
 type customHook struct {

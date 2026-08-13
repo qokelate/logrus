@@ -1,4 +1,4 @@
-# Logrus <img src="http://i.imgur.com/hTeVwmJ.png" width="40" height="40" alt=":walrus:" class="emoji" title=":walrus:"/> [![Build Status](https://github.com/sirupsen/logrus/workflows/CI/badge.svg)](https://github.com/sirupsen/logrus/actions?query=workflow%3ACI) [![Go Reference](https://pkg.go.dev/badge/github.com/sirupsen/logrus.svg)](https://pkg.go.dev/github.com/sirupsen/logrus)
+# Logrus <img src="http://i.imgur.com/hTeVwmJ.png" width="40" height="40" alt=":walrus:" class="emoji" title=":walrus:"/> [![Build Status](https://github.com/qokelate/logrus/workflows/CI/badge.svg)](https://github.com/qokelate/logrus/actions?query=workflow%3ACI) [![Go Reference](https://pkg.go.dev/badge/github.com/qokelate/logrus.svg)](https://pkg.go.dev/github.com/qokelate/logrus)
 
 Logrus is a structured logger for Go (golang), completely API compatible with
 the standard library logger.
@@ -88,9 +88,9 @@ go test -bench=ReportCaller
 
 The organization's name was [changed to lower-case][1]. If you are getting import
 conflicts due to case sensitivity, please use the lower-case import:
-`github.com/sirupsen/logrus`.
+`github.com/qokelate/logrus`.
 
-[1]: https://github.com/sirupsen/logrus/issues/570#issuecomment-313933276
+[1]: https://github.com/qokelate/logrus/issues/570#issuecomment-313933276
 
 #### Example
 
@@ -99,7 +99,7 @@ The simplest way to use Logrus is simply the package-level exported logger:
 ```go
 package main
 
-import "github.com/sirupsen/logrus"
+import "github.com/qokelate/logrus"
 
 func main() {
   logrus.WithFields(logrus.Fields{
@@ -109,7 +109,7 @@ func main() {
 ```
 
 Note that it's completely api-compatible with the stdlib logger, so you can
-replace your `log` imports everywhere with `log "github.com/sirupsen/logrus"`
+replace your `log` imports everywhere with `log "github.com/qokelate/logrus"`
 and you'll now have the flexibility of Logrus. You can customize it all you
 want:
 
@@ -119,7 +119,7 @@ package main
 import (
   "os"
 
-  log "github.com/sirupsen/logrus"
+  log "github.com/qokelate/logrus"
 )
 
 func init() {
@@ -171,7 +171,7 @@ package main
 import (
   "os"
 
-  "github.com/sirupsen/logrus"
+  "github.com/qokelate/logrus"
 )
 
 // Create a new instance of the logger. You can have any number of instances.
@@ -250,9 +250,9 @@ package main
 import (
   "log/syslog"
 
-  "github.com/sirupsen/logrus"
+  "github.com/qokelate/logrus"
   airbrake "gopkg.in/gemnasium/logrus-airbrake-hook.v2"
-  logrus_syslog "github.com/sirupsen/logrus/hooks/syslog"
+  logrus_syslog "github.com/qokelate/logrus/hooks/syslog"
 )
 
 func init() {
@@ -272,7 +272,7 @@ func init() {
 
 Note: Syslog hooks also support connecting to local syslog (Ex. "/dev/log" or "/var/run/syslog" or "/var/run/log"). For the detail, please check the [syslog hook README](hooks/syslog/README.md).
 
-A list of currently known service hooks can be found in this wiki [page](https://github.com/sirupsen/logrus/wiki/Hooks)
+A list of currently known service hooks can be found in this wiki [page](https://github.com/qokelate/logrus/wiki/Hooks)
 
 
 #### Level logging
@@ -325,7 +325,7 @@ could do:
 
 ```go
 import (
-  "github.com/sirupsen/logrus"
+  "github.com/qokelate/logrus"
 )
 
 func init() {
@@ -348,7 +348,7 @@ Splunk or Logstash.
 
 The built-in logging formatters are:
 
-* [`logrus.TextFormatter`](https://pkg.go.dev/github.com/sirupsen/logrus#TextFormatter)
+* [`logrus.TextFormatter`](https://pkg.go.dev/github.com/qokelate/logrus#TextFormatter)
   logs the event in colors if the logger output is a TTY, otherwise without colors.
   * To force colored output when there is no TTY, set the `ForceColors`
     field to `true`.  To force no colored output even if there is a TTY  set the
@@ -361,7 +361,7 @@ The built-in logging formatters are:
   * When colors are enabled, levels are truncated to 4 characters by default. To disable
     truncation set the `DisableLevelTruncation` field to `true`.
   * When outputting to a TTY, it's often helpful to visually scan down a column where all the levels are the same width. Setting the `PadLevelText` field to `true` enables this behavior, by adding padding to the level text.
-* [`logrus.JSONFormatter`](https://pkg.go.dev/github.com/sirupsen/logrus#JSONFormatter)
+* [`logrus.JSONFormatter`](https://pkg.go.dev/github.com/qokelate/logrus#JSONFormatter)
   logs fields as JSON.
 
 Third-party logging formatters:
@@ -453,8 +453,8 @@ Logrus has a built-in facility for asserting the presence of log messages. This 
 import(
   "testing"
 
-  "github.com/sirupsen/logrus"
-  "github.com/sirupsen/logrus/hooks/test"
+  "github.com/qokelate/logrus"
+  "github.com/qokelate/logrus/hooks/test"
   "github.com/stretchr/testify/assert"
 )
 

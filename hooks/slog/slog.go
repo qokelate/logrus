@@ -10,7 +10,7 @@ import (
 	"log/slog"
 	"maps"
 
-	"github.com/sirupsen/logrus"
+	"github.com/qokelate/logrus"
 )
 
 // slog levels corresponding to Logrus levels.
