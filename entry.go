@@ -430,7 +430,7 @@ func (entry *Entry) Debug(args ...any) {
 }
 
 func (entry *Entry) Print(args ...any) {
-	entry.Info(args...)
+	entry.LogRaw(InfoLevel, args...)
 }
 
 func (entry *Entry) Info(args ...any) {
@@ -488,7 +488,7 @@ func (entry *Entry) Infof(format string, args ...any) {
 }
 
 func (entry *Entry) Printf(format string, args ...any) {
-	entry.Infof(format, args...)
+	entry.LogfRaw(InfoLevel, format, args...)
 }
 
 func (entry *Entry) Warnf(format string, args ...any) {
@@ -542,7 +542,7 @@ func (entry *Entry) Infoln(args ...any) {
 }
 
 func (entry *Entry) Println(args ...any) {
-	entry.Infoln(args...)
+	entry.LoglnRaw(InfoLevel, args...)
 }
 
 func (entry *Entry) Warnln(args ...any) {
