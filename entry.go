@@ -421,6 +421,10 @@ func (entry *Entry) Log(level Level, args ...any) {
 	}
 }
 
+func (entry *Entry) LogRaw(level Level, args ...any) {
+	entry.logArgs(level, false, args...)
+}
+
 func (entry *Entry) Trace(args ...any) {
 	entry.Log(TraceLevel, args...)
 }
@@ -430,7 +434,7 @@ func (entry *Entry) Debug(args ...any) {
 }
 
 func (entry *Entry) Print(args ...any) {
-	entry.Info(args...)
+	entry.LogRaw(InfoLevel, args...)
 }
 
 func (entry *Entry) Info(args ...any) {
@@ -475,6 +479,10 @@ func (entry *Entry) Logf(level Level, format string, args ...any) {
 	}
 }
 
+func (entry *Entry) LogfRaw(level Level, format string, args ...any) {
+	entry.logf(level, false, format, args...)
+}
+
 func (entry *Entry) Tracef(format string, args ...any) {
 	entry.Logf(TraceLevel, format, args...)
 }
@@ -488,7 +496,7 @@ func (entry *Entry) Infof(format string, args ...any) {
 }
 
 func (entry *Entry) Printf(format string, args ...any) {
-	entry.Infof(format, args...)
+	entry.LogfRaw(InfoLevel, format, args...)
 }
 
 func (entry *Entry) Warnf(format string, args ...any) {
@@ -529,6 +537,10 @@ func (entry *Entry) Logln(level Level, args ...any) {
 	}
 }
 
+func (entry *Entry) LoglnRaw(level Level, args ...any) {
+	entry.logln(level, false, args...)
+}
+
 func (entry *Entry) Traceln(args ...any) {
 	entry.Logln(TraceLevel, args...)
 }
@@ -542,7 +554,7 @@ func (entry *Entry) Infoln(args ...any) {
 }
 
 func (entry *Entry) Println(args ...any) {
-	entry.Infoln(args...)
+	entry.LoglnRaw(InfoLevel, args...)
 }
 
 func (entry *Entry) Warnln(args ...any) {
